@@ -10,7 +10,7 @@ pub fn show_menu(title: &str, items: &[&str], main_menu: bool) -> u8 {
   println!("{}", "=".repeat(full_title.len()));
 
   display_options(items, main_menu);
-  display_prompt();
+  display_prompt(String::from("Choose an option: "));
 
   let mut choice: String = String::new();
 
@@ -27,8 +27,8 @@ pub fn show_menu(title: &str, items: &[&str], main_menu: bool) -> u8 {
 }
 
 
-pub fn display_prompt() {
-  print!("\nEscolha a opção: ");
+pub fn display_prompt(prompt: String) {
+  print!("\n{}", prompt);
   std::io::stdout().flush().unwrap();
 }
 
