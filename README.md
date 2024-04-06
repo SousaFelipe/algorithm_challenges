@@ -6,7 +6,7 @@ This project was developed with the purpose of practicing different algorithms w
 
 ## References
 
- - [Khan Academy, Article - Binary Search](https://pt.khanacademy.org/computing/computer-science/algorithms/binary-search/a/binary-search)
+ - [Khan Academy, Article - Binary Search](https://pt.khanacademy.org/computing/computer-science/algorithms/binary-search/a/binary-search){:target="_blank"}
 
 
 Project layout
