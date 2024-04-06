@@ -1,6 +1,7 @@
 
-# Rust Binary Search
+# Algorithms exercise with Rust
 
+Keep cal, i'm just a noob! 😉\
 This project was developed with the purpose of practicing different algorithms with the Rust language. Most of the solutions presented here cannot be applied in production environments, considering that the language already has native resources for the type of algorithm applied here.
 
 
