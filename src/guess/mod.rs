@@ -1,11 +1,11 @@
-use crate::utils::{range::Range, terminal};
+use crate::utils::{range::BinRange, terminal};
 
 use std::cmp::Ordering;
 use rand::Rng;
 
 
 pub fn play_auto_guess_game() {
-  let mut range: Range = Range::new(1, 100);
+  let mut range: BinRange = BinRange::new(1, 100);
 
   // First random number, generated between 1 and 100
   // This number is what the algorithm should get right
