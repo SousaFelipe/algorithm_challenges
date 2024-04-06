@@ -9,7 +9,7 @@ fn main() {
   loop {
     utils::terminal::clear_screen();
 
-    let choice: u32 = utils::terminal::show_menu("Main Menu", &menu, true);
+    let choice: u8 = utils::terminal::show_menu("Main Menu", &menu, true);
 
     match choice {
       1 => guess::play_auto_guess_game(),

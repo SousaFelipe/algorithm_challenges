@@ -7,7 +7,7 @@ use rand::Rng;
 pub fn play_auto_guess_game() {
   let mut range: Range = Range::new(1, 100);
 
-  // First random number, generator between 1 and 100
+  // First random number, generated between 1 and 100
   // This number is what the algorithm should get right
   let random: u8 = rand::thread_rng()
     .gen_range(range.min..=range.max);
@@ -15,8 +15,10 @@ pub fn play_auto_guess_game() {
   loop {
     
     let guess: u8 = if range.min == range.max {
-      // If min is equal to max, it means that you do not need
-      // to generate a new guess, without this rule the app may crash
+      // If min is equal to max, it means that a new guess does
+      // not need to be generated. This condition also prevents the
+      // application crash, preventing gente_range(min..=max) from
+      // trying to generate a number with min and max being equal
       range.min
     }
     else {

@@ -3,7 +3,7 @@ use rpassword;
 
 
 
-pub fn show_menu(title: &str, items: &[&str], main_menu: bool) -> u32 {
+pub fn show_menu(title: &str, items: &[&str], main_menu: bool) -> u8 {
   let full_title: String = String::from("Interative Rust CMD :: ") + title;
   
   println!("{}", full_title);
