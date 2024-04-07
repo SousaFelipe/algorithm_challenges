@@ -2,7 +2,6 @@ use std::io::Write;
 use rpassword;
 
 
-
 pub fn show_menu(title: &str, items: &[&str], main_menu: bool) -> u8 {
   let full_title: String = String::from("Interative Rust CMD :: ") + title;
   
@@ -17,8 +16,6 @@ pub fn show_menu(title: &str, items: &[&str], main_menu: bool) -> u8 {
   std::io::stdin()
     .read_line(&mut choice)
     .unwrap();
-
-  println!("");
 
   match choice.trim().parse() {
     Ok(num) => num,
@@ -46,6 +43,6 @@ pub fn clear_screen() {
 }
 
 
-pub fn wait_any() {
+pub fn wait_any_key() {
   rpassword::prompt_password("Press any key to continue...").unwrap();
 }

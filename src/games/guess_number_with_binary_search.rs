@@ -6,6 +6,7 @@ use rand::Rng;
 
 
 pub fn play(from: u32, to: u32) {
+  println!("");
 
   // Search range start index
   let mut min: u32 = from;
@@ -36,7 +37,7 @@ pub fn play(from: u32, to: u32) {
     match guess.cmp(&random) {
       Ordering::Equal => {
         println!("Congratulations, you guessed right: {}!\n", guess);
-        terminal::wait_any();
+        terminal::wait_any_key();
         break
       },
       Ordering::Less => {
