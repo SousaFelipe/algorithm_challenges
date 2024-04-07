@@ -12,9 +12,3 @@ pub fn is_prime(num: &u32) -> bool {
 
   true
 }
-
-
-pub fn middle_between(min: u32, max: u32) -> usize {
-  let sum: u32 = min + max;
-  f64::from(sum / 2).floor() as usize
-}

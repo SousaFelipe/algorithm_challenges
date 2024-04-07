@@ -1,4 +1,3 @@
-use crate::utils::middle_between;
 
 
 
@@ -36,4 +35,10 @@ pub fn execute(vector: &Vec<u32>, find: u32) -> (usize, u32, u32) {
   }
 
   (0, 0, 0)
+}
+
+
+pub fn middle_between(min: u32, max: u32) -> usize {
+  let sum: u32 = min + max;
+  f64::from(sum / 2).floor() as usize
 }
