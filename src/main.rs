@@ -3,17 +3,20 @@ pub mod games;
 pub mod utils;
 
 
+
 use games::{
   find_number_with_binary_search,
-  guess_number_with_binary_search
+  guess_number_with_binary_search, sort_vec_with_bubble_sort
 };
+
 
 
 fn main() {
   
-  let menu: [&str; 2] = [
+  let menu: [&str; 3] = [
     "Binary Search - Automatic guess number",
-    "Binary Search - Find number in Vec<u32>"
+    "Binary Search - Find number in Vec<u32>",
+    "Bubble Sort - Sort a &Vec<u32>"
   ];
 
   loop {
@@ -24,6 +27,7 @@ fn main() {
     match choice {
       1 => guess_number_with_binary_search::play(1, 100),
       2 => find_number_with_binary_search::play(1, 1000),
+      3 => sort_vec_with_bubble_sort::play(),
       _ => break
     }
   }
