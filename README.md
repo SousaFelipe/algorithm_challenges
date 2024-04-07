@@ -8,6 +8,7 @@ This project was developed with the purpose of practicing different algorithms w
 ## References
 
   - [Khan Academy, Article - Binary Search](https://pt.khanacademy.org/computing/computer-science/algorithms/binary-search/a/binary-search)
+  - [Embarcados, Article - Bubble Sort](https://embarcados.com.br/algoritmos-de-ordenacao-bubble-sort/)
 
 
 Project layout
