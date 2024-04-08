@@ -24,7 +24,7 @@ fn main() {
     let choice: u8 = utils::terminal::show_menu("Algorithm Challenges", &menu, true);
 
     match choice {
-      1 => find_number_with_binary_search::play(1, 1000),
+      1 => find_number_with_binary_search::play(1, 100),
       2 => sort_vec_with_bubble_sort::play(),
       _ => break
     }

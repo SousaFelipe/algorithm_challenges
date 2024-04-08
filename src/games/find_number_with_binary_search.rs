@@ -13,7 +13,11 @@ pub fn play(from: u32, to: u32) {
     .collect();
 
   terminal::display_prompt(
-    format!("Choose a prime number between {} and {}: ", from, to)
+    format!(
+      "Choose a prime number between {} and {}: ",
+      primes.first().unwrap(),
+      primes.last().unwrap()
+    )
   );
 
   let mut search: String = String::new();
