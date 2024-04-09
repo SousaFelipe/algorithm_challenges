@@ -6,16 +6,18 @@ pub mod utils;
 
 use games::{
   find_number_with_binary_search,
-  sort_vec_with_bubble_sort
+  sort_vec_with_bubble_sort,
+  sort_vec_with_selection_sort
 };
 
 
 
 fn main() {
   
-  let menu: [&str; 2] = [
-    "Binary Search - Find number in Vec<u32>",
-    "Bubble Sort - Sort a &Vec<u32>"
+  let menu = [
+    "Binary Search",
+    "Bubble Sort",
+    "Selection Sort"
   ];
 
   loop {
@@ -26,6 +28,7 @@ fn main() {
     match choice {
       1 => find_number_with_binary_search::play(1, 100),
       2 => sort_vec_with_bubble_sort::play(),
+      3 => sort_vec_with_selection_sort::play(),
       _ => break
     }
   }

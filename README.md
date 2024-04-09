@@ -15,6 +15,7 @@ This project was developed with the purpose of practicing different algorithms w
 
   - Binary Search
   - Bubble Sort
+  - Selection Sort
 
 
 Project layout
