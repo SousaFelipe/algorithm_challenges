@@ -3,11 +3,13 @@
 #include <vector>
 
 
-
 void clear_screen();
 
 
-unsigned short int display_prompt();
+unsigned short int display_prompt(
+  const std::string prompt,
+  unsigned short int max_attempts = 3
+);
 
 
 void display_options(

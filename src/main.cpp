@@ -3,7 +3,7 @@
 #include <vector>
 
 
-#include "./utils/terminal.h"
+#include "utils/terminal.h"
 
 
 int main() {
