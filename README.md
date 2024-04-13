@@ -13,7 +13,7 @@ This project was developed with the purpose of practicing different algorithms w
 
 ## Algorithms x Languages
   
-  * [Rust](https://www.youtube.com/watch?v=3HIr0imLgxM)
+  * [Rust](https://github.com/SousaFelipe/algorithm_challenges/tree/rust)
     - Binary Search
     - Bubble Sort
     - Selection Sort
