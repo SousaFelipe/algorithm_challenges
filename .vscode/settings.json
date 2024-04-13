@@ -1,0 +1,7 @@
+{
+  "cmake.sourceDirectory": "D:/DEV/algorithm_challenges/src",
+  "files.associations": {
+    "*.asm": "code-text-binary",
+    "iostream": "cpp"
+  }
+}
