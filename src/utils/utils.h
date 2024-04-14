@@ -3,4 +3,8 @@
 #endif
 
 
-bool is_prime(unsigned int &num);
+namespace utils {
+
+
+  bool is_prime(unsigned int &num);
+}

@@ -3,17 +3,8 @@
 #include <vector>
 
 
-#ifndef BINARY_SEARCH_MODULE
-  #include "./algorithms/binary_search.h"
-#endif
-
-#ifndef BINARY_SEARCH_GAME_MODULE
-  #include "./games/binary_search_number.h"
-#endif
-
-#ifndef TERMINAL_UTILS_MODULE
-  #include "./utils/terminal.h"
-#endif
+#include "./games/games.h"
+#include "./utils/terminal.h"
 
 
 int main() {
@@ -28,16 +19,16 @@ int main() {
   unsigned int choice = 0;
 
   while (true) {
-    clear_screen();
+    terminal::clear_screen();
 
-    choice = show_menu("Algorithm Challenges", menu, true);
+    choice = terminal::show_menu("Algorithm Challenges", menu, true);
 
     if (choice == 0) {
       break;
     }
 
     if (choice == 1) {
-      play_binary_search_number(1, 300);
+      games::play_binary_search_number(1, 300);
     }
   }
 

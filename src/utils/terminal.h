@@ -3,31 +3,35 @@
 #endif
 
 
-#include <iostream>
 #include <string>
 #include <vector>
 
 
-void clear_screen();
+namespace terminal {
 
 
-void wait_any_key();
+  void clear_screen();
 
 
-unsigned int display_prompt(
-  const std::string prompt,
-  unsigned int max_attempts
-);
+  void wait_any_key();
 
 
-void display_options(
-  const std::vector<std::string> &items,
-  bool main_menu
-);
+  unsigned int display_prompt(
+    const std::string prompt,
+    unsigned int max_attempts
+  );
 
 
-unsigned int show_menu(
-  const std::string title,
-  const std::vector<std::string> &items,
-  bool main_menu
-);
+  void display_options(
+    const std::vector<std::string> &items,
+    bool main_menu
+  );
+
+
+  unsigned int show_menu(
+    const std::string title,
+    const std::vector<std::string> &items,
+    bool main_menu
+  );
+
+}

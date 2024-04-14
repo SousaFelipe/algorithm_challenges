@@ -3,23 +3,20 @@
 #endif
 
 
+#include <cmath>
+#include <iostream>
+#include <string>
 #include <vector>
 
 
-#ifndef BINARY_RESULT
-#define BINARY_RESULT
-
-struct BinaryResult
-{
-  unsigned int found;
-  unsigned short int index;
-  unsigned short int rounds;
-};
-
-#endif
+#include <vector>
 
 
-BinaryResult execute_binary_search(
-  const std::vector<unsigned int> &unsorted,
-  unsigned const int search
-);
+namespace binary_search {
+
+
+  std::vector<unsigned int> execute(
+    const std::vector<unsigned int> &unsorted,
+    unsigned const int search
+  );
+}

@@ -4,37 +4,39 @@
 #include <vector>
 
 
-#ifndef BINARY_SEARCH_MODULE
-  #include "binary_search.h"
-#endif
+#include "binary_search.h"
 
 
-BinaryResult execute_binary_search(
-  const std::vector<unsigned int> &unsorted,
-  unsigned const int search
-) {
+namespace binary_search {
 
-  unsigned short int min = 0;
-  unsigned short int max = 0;
-  unsigned short int mid = 0;
-  unsigned short int rounds = 0;
 
-  while (min <= max) {
-    mid = int(std::floor((min + max) / 2));
+  std::vector<unsigned int> execute(
+    const std::vector<unsigned int> &unsorted,
+    unsigned const int search
+  ) {
 
-    if (unsorted[mid] == search) {
-      return { unsorted[mid], mid, rounds };
+    unsigned int min = 0;
+    unsigned int max = 0;
+    unsigned int mid = 0;
+    unsigned int rounds = 0;
+
+    while (min <= max) {
+      mid = int(std::floor((min + max) / 2));
+
+      if (unsorted[mid] == search) {
+        return { unsorted[mid], mid, rounds };
+      }
+
+      if (unsorted[mid] < search) {
+        min = mid + 1;
+      }
+      else {
+        max = mid - 1;
+      }
+
+      rounds++;
     }
 
-    if (unsorted[mid] < search) {
-      min = mid + 1;
-    }
-    else {
-      max = mid - 1;
-    }
-
-    rounds++;
+    return { 0, 0, rounds };
   }
-
-  return { 0, 0, rounds };
 }
