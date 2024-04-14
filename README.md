@@ -2,7 +2,7 @@
 # Algorithms exercise with [C++](https://en.cppreference.com/w/)
 
 Keep cal, i'm just a noob! 😉\
-This project was developed with the purpose of practicing different algorithms with the Rust language. Most of the solutions presented here cannot be applied in production environments, considering that the language already has native resources for the type of algorithm applied here.
+This project was developed with the aim of practicing different algorithms using the C++ language. Most of the solutions implemented here do not need to be applied in production environments, as the language already has native resources for most of the algorithms present in this project, but if anything here helps you... Bon appétit!
 
 
 ## References
