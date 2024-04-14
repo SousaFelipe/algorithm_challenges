@@ -3,7 +3,17 @@
 #include <vector>
 
 
-#include "utils/terminal.h"
+#ifndef BINARY_SEARCH_MODULE
+  #include "./algorithms/binary_search.h"
+#endif
+
+#ifndef BINARY_SEARCH_GAME_MODULE
+  #include "./games/binary_search_number.h"
+#endif
+
+#ifndef TERMINAL_UTILS_MODULE
+  #include "./utils/terminal.h"
+#endif
 
 
 int main() {
@@ -15,7 +25,7 @@ int main() {
     "Insertion Sort"
   };
 
-  unsigned short int choice;
+  unsigned int choice = 0;
 
   while (true) {
     clear_screen();
@@ -25,8 +35,11 @@ int main() {
     if (choice == 0) {
       break;
     }
+
+    if (choice == 1) {
+      play_binary_search_number(1, 300);
+    }
   }
-  
 
   return 0;
 }

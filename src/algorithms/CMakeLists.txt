@@ -1,1 +1,1 @@
-add_library(algorithms algorithms.h binary_search.cpp)
+add_library(algorithms algorithms.h algorithms.cpp binary_search.cpp)

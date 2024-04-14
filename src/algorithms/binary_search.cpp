@@ -4,21 +4,14 @@
 #include <vector>
 
 
-#include "binary_search.h"
-#include "types.h"
+#ifndef BINARY_SEARCH_MODULE
+  #include "binary_search.h"
+#endif
 
 
-struct BinaryResult
-{
-  unsigned int found;
-  unsigned short int index;
-  unsigned short int rounds;
-};
-
-
-struct BinaryResult execute(
-  std::vector<unsigned int> &unsorted,
-  unsigned int search
+BinaryResult execute_binary_search(
+  const std::vector<unsigned int> &unsorted,
+  unsigned const int search
 ) {
 
   unsigned short int min = 0;
@@ -27,7 +20,7 @@ struct BinaryResult execute(
   unsigned short int rounds = 0;
 
   while (min <= max) {
-    mid = short int(std::floor((min + max) / 2));
+    mid = int(std::floor((min + max) / 2));
 
     if (unsorted[mid] == search) {
       return { unsorted[mid], mid, rounds };

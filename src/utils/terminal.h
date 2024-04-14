@@ -1,3 +1,8 @@
+#ifndef TERMINAL_UTILS_MODULE
+#define TERMINAL_UTILS_MODULE
+#endif
+
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -6,9 +11,12 @@
 void clear_screen();
 
 
-unsigned short int display_prompt(
+void wait_any_key();
+
+
+unsigned int display_prompt(
   const std::string prompt,
-  unsigned short int max_attempts = 3
+  unsigned int max_attempts
 );
 
 
@@ -18,7 +26,7 @@ void display_options(
 );
 
 
-unsigned short int show_menu(
+unsigned int show_menu(
   const std::string title,
   const std::vector<std::string> &items,
   bool main_menu

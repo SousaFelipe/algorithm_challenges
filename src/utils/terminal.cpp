@@ -3,6 +3,9 @@
 #include <vector>
 
 
+#include "terminal.h"
+
+
 void clear_screen() {
   #if defined _WIN32
     system("cls");
@@ -14,12 +17,20 @@ void clear_screen() {
 }
 
 
-unsigned short int display_prompt(
+void wait_any_key() {
+  char c;
+  std::cout << '\n' << "Press any to continue...";
+  std::cin >> c;
+}
+
+
+unsigned int display_prompt(
   const std::string prompt,
-  unsigned short int max_attempts = 3
+  unsigned int max_attempts
 ) {
-  unsigned short int attpt;
-  unsigned short int input;
+
+  unsigned int input;
+  unsigned int attpt;
 
   while (true) {
     
@@ -33,7 +44,7 @@ unsigned short int display_prompt(
       std::cin.clear();
       std::cin.ignore(65535, '\n');
     }
-
+    
     attpt++;
   }
 
@@ -60,7 +71,7 @@ void display_options(
 }
 
 
-unsigned short int show_menu(
+unsigned int show_menu(
   const std::string title,
   const std::vector<std::string> &items,
   bool main_menu
@@ -79,5 +90,5 @@ unsigned short int show_menu(
 
   display_options(items, main_menu);
   
-  return display_prompt("Choose an option");
+  return display_prompt("Choose an option", 3);
 }
