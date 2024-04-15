@@ -9,23 +9,23 @@ namespace binary_search {
 
 
   Result execute(
-    const std::vector<unsigned int> &unsorted,
+    const std::vector<unsigned int> &unordered,
     unsigned const int search
   ) {
 
     unsigned int min = 0;
-    unsigned int max = int(unsorted.size() - 1);
+    unsigned int max = int(unordered.size() - 1);
     unsigned int mid = 0;
     unsigned int rounds = 0;
 
     while (min <= max) {
       mid = int(std::floor((min + max) / 2));
 
-      if (unsorted[mid] == search) {
+      if (unordered[mid] == search) {
         return { true, mid, rounds };
       }
 
-      if (unsorted[mid] < search) {
+      if (unordered[mid] < search) {
         min = mid + 1;
       }
       else {
