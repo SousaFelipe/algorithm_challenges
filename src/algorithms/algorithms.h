@@ -6,7 +6,7 @@
 
 namespace algorithms {
 
-  std::vector<unsigned int> execute_binary_search(
+  binary_search::Result execute_binary_search(
     const std::vector<unsigned int> &unsorted,
     unsigned const int search
   );

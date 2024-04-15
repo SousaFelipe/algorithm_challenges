@@ -3,19 +3,22 @@
 #endif
 
 
-#include <cmath>
-#include <iostream>
-#include <string>
-#include <vector>
-
-
-#include <vector>
-
-
 namespace binary_search {
 
 
-  std::vector<unsigned int> execute(
+  #ifndef BINARY_RESULT
+  #define BINARY_RESULT
+
+  struct Result {
+    bool found;
+    unsigned int index;
+    unsigned int rounds;
+  };
+
+  #endif
+
+
+  Result execute(
     const std::vector<unsigned int> &unsorted,
     unsigned const int search
   );

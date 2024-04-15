@@ -1,6 +1,4 @@
 #include <cmath>
-#include <iostream>
-#include <string>
 #include <vector>
 
 
@@ -10,13 +8,13 @@
 namespace binary_search {
 
 
-  std::vector<unsigned int> execute(
+  Result execute(
     const std::vector<unsigned int> &unsorted,
     unsigned const int search
   ) {
 
     unsigned int min = 0;
-    unsigned int max = 0;
+    unsigned int max = int(unsorted.size() - 1);
     unsigned int mid = 0;
     unsigned int rounds = 0;
 
@@ -24,7 +22,7 @@ namespace binary_search {
       mid = int(std::floor((min + max) / 2));
 
       if (unsorted[mid] == search) {
-        return { unsorted[mid], mid, rounds };
+        return { true, mid, rounds };
       }
 
       if (unsorted[mid] < search) {
@@ -37,6 +35,6 @@ namespace binary_search {
       rounds++;
     }
 
-    return { 0, 0, rounds };
+    return { false, 0, rounds };
   }
 }

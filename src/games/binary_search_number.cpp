@@ -11,7 +11,6 @@
 #include "binary_search_number.h"
 
 
-
 namespace binary_search_number {
 
 
@@ -37,22 +36,24 @@ namespace binary_search_number {
     unsigned const int to
   ) {
 
-    std::string prompt = "Choose a prime number between "+ std::to_string(from) +" and "+ std::to_string(to) +": ";
     std::vector<unsigned int> vector = prime_vector_from_range(from, to);
+
+    std::string str_from = std::to_string(from);
+    std::string str_to = std::to_string(to);
+    std::string msg = "Choose a prime number between "+ str_from +" and "+ str_to;
 
     std::cout << "\n" << "Generated list of primes with " << vector.size() << " numbers\n";
 
-    unsigned int search = terminal::display_prompt(prompt, 3);
-    std::vector<unsigned int> result = algorithms::execute_binary_search(vector, search);
+    unsigned int search = terminal::display_prompt(msg, 3);
+    binary_search::Result result = algorithms::execute_binary_search(vector, search);
 
-    if (result[0] == 0) {
-      std::cout << search << " is not a prime number\n";
+    if (result.found) {
+      std::cout << "Prime " << search
+                << " founded in index " << result.index
+                << " after " << result.rounds << " rounds!\n";
     }
     else {
-      std::cout << "Prime " << search
-                << " founded in index " << result[1]
-                << " after " << result[2]
-                << " iterations\n";
+      std::cout << search << " is not a prime number\n";
     }
 
     terminal::wait_any_key();

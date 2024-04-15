@@ -1,4 +1,5 @@
 #include <iostream>
+#include <limits>
 #include <string>
 #include <vector>
 
@@ -21,10 +22,8 @@ namespace terminal {
 
 
   void wait_any_key() {
-    char c;
-    std::cout << '\n' << "Press any to continue...";
-    std::cin >> c;
-    std::cin.clear();
+    std::cout << "\n";
+    system("PAUSE");
   }
 
 
@@ -38,7 +37,7 @@ namespace terminal {
 
     while (true) {
       
-      std::cout << "\n" << prompt << ": ";
+      std::cout << "\n" << prompt << "> ";
       std::cin >> input;
 
       if (!std::cin.fail() || attpt == max_attempts) {
