@@ -19,7 +19,7 @@ namespace binary_search {
 
 
   Result execute(
-    const std::vector<unsigned int> &unordered,
+    const std::vector<unsigned int> &sorted,
     unsigned const int search
   );
 }

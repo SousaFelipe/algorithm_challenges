@@ -7,7 +7,7 @@
 namespace algorithms {
 
   binary_search::Result execute_binary_search(
-    const std::vector<unsigned int> &unordered,
+    const std::vector<unsigned int> &sorted,
     unsigned const int search
   );
 }

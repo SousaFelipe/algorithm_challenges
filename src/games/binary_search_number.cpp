@@ -33,15 +33,15 @@ namespace binary_search_number {
     unsigned const int &to
   ) {
 
-    std::vector<unsigned int> vector = std::vector<unsigned int>();
+    std::vector<unsigned int> primes = std::vector<unsigned int>();
 
     for (unsigned int n = from; n <= to; n++) {
       if (utils::is_prime(n)) {
-        vector.push_back(n);
+        primes.push_back(n);
       }
     }
 
-    return vector;
+    return primes;
   }
 
 
@@ -50,11 +50,11 @@ namespace binary_search_number {
     unsigned const int to
   ) {
 
-    std::vector<unsigned int> unordered = prime_vector_from_range(from, to);
+    std::vector<unsigned int> primes = prime_vector_from_range(from, to);
 
-    std::string msg = msg_from_vector_info(from, to, unordered.size());
+    std::string msg = msg_from_vector_info(from, to, primes.size());
     unsigned int search = terminal::display_prompt(msg, 3);
-    binary_search::Result result = algorithms::execute_binary_search(unordered, search);
+    binary_search::Result result = algorithms::execute_binary_search(primes, search);
 
     if (result.found) {
       std::cout << "Prime " << search
