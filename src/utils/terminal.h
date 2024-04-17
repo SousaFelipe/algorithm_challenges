@@ -10,6 +10,12 @@
 namespace terminal {
 
 
+  std::string rept_char(
+    const char c,
+    unsigned const short int times
+  );
+
+
   void clear_screen();
 
 

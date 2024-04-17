@@ -27,8 +27,16 @@ int main() {
       break;
     }
 
-    if (choice == 1) {
-      games::play_binary_search_number(1, 300);
+    switch (choice)
+    {
+      case 1:
+        games::play_binary_search_number(1, 300);
+        break;
+
+      default:
+        std::cout << "Unknow response. Please, try again...\n";
+        terminal::wait_any_key();
+        break;
     }
   }
 

@@ -1,3 +1,4 @@
+#include <iomanip>
 #include <iostream>
 #include <limits>
 #include <string>
@@ -8,6 +9,22 @@
 
 
 namespace terminal {
+
+
+  std::string rept_char(
+    const std::string rept,
+    unsigned const short int times
+  ) {
+    
+    std::string result = "";
+    unsigned short int i;
+
+    for (i = 0; i < times; i++){
+      result.append(rept);
+    }
+
+    return result;
+  }
 
 
   void clear_screen() {
@@ -66,10 +83,10 @@ namespace terminal {
     }
 
     if (main_menu) {
-      std::cout << "* - Exit\n";
+      std::cout << "0 - Exit\n";
     }
     else {
-      std::cout << "* - Back\n";
+      std::cout << "0 - Back\n";
     }
   }
 
@@ -81,15 +98,9 @@ namespace terminal {
   ) {
 
     const std::string full_title = "Interative C++ CMD :: " + title;
-    unsigned short int i;
 
     std::cout << full_title << "\n";
-
-    for (i = 0; i < full_title.length(); i++) {
-      std::cout << "=";
-    }
-
-    std::cout << "\n";
+    std::cout << rept_char("=", full_title.length()) << "\n\n";
 
     display_options(items, main_menu);
     

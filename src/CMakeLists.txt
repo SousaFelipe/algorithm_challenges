@@ -15,13 +15,16 @@ target_link_libraries(CppChallenge PUBLIC algorithms)
 target_link_libraries(CppChallenge PUBLIC utils)
 
 target_include_directories(CppChallenge PUBLIC
-                          "${PROJECT_BINARY_DIR}"
-                          "${PROJECT_SOURCE_DIR}/games")
+  "${PROJECT_BINARY_DIR}"
+  "${PROJECT_SOURCE_DIR}/games"
+)
 
 target_include_directories(CppChallenge PUBLIC
-                          "${PROJECT_BINARY_DIR}"
-                          "${PROJECT_SOURCE_DIR}/utils")
+  "${PROJECT_BINARY_DIR}"
+  "${PROJECT_SOURCE_DIR}/utils"
+)
 
 target_include_directories(CppChallenge PUBLIC
-                          "${PROJECT_BINARY_DIR}"
-                          "${PROJECT_SOURCE_DIR}/algorithms")
+  "${PROJECT_BINARY_DIR}"
+  "${PROJECT_SOURCE_DIR}/algorithms"
+)
