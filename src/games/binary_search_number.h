@@ -1,6 +1,5 @@
 #ifndef BINARY_SEARCH_GAME_MODULE
 #define BINARY_SEARCH_GAME_MODULE
-#endif
 
 
 #include <string>
@@ -28,3 +27,6 @@ namespace binary_search_number {
     unsigned const int to
   );
 }
+
+
+#endif

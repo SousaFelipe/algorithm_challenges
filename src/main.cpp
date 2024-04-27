@@ -33,6 +33,10 @@ int main() {
         games::play_binary_search_number(1, 300);
         break;
 
+      case 2:
+        games::play_bubble_sort();
+        break;
+
       default:
         std::cout << "Unknow response. Please, try again...\n";
         terminal::wait_any_key();

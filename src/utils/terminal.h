@@ -1,6 +1,5 @@
 #ifndef TERMINAL_UTILS_MODULE
 #define TERMINAL_UTILS_MODULE
-#endif
 
 
 #include <string>
@@ -14,6 +13,12 @@ namespace terminal {
 
 
   void wait_any_key();
+
+
+  std::string array_join(
+    const std::vector<unsigned int> &array,
+    const std::string joiner
+  );
 
 
   unsigned int display_prompt(
@@ -35,3 +40,6 @@ namespace terminal {
   );
 
 }
+
+
+#endif

@@ -10,4 +10,11 @@ namespace algorithms {
   ) {
     return binary_search::execute(sorted, search);
   }
+
+
+  void execute_bubble_sort(
+    std::vector<unsigned int> &unsorted
+  ) {
+    return bubble_sort::execute(unsorted);
+  }
 }

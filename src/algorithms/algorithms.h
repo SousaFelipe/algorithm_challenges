@@ -2,6 +2,7 @@
 
 
 #include "binary_search.h"
+#include "bubble_sort.h"
 
 
 namespace algorithms {
@@ -10,4 +11,7 @@ namespace algorithms {
     const std::vector<unsigned int> &sorted,
     unsigned const int search
   );
+
+
+  void execute_bubble_sort(std::vector<unsigned int> &unsorted);
 }

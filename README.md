@@ -13,7 +13,8 @@ This project was developed with the aim of practicing different algorithms using
 
 ## Implemented Algorithms
 
-  - Working...
+  - Binary Search
+  - Bubble Sort
 
 
 Project layout
