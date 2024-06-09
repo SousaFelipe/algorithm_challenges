@@ -51,9 +51,9 @@ namespace binary_search_number {
   ) {
 
     std::vector<unsigned int> primes = prime_vector_from_range(from, to);
-
     std::string msg = msg_from_vector_info(from, to, primes.size());
     unsigned int search = terminal::display_prompt(msg, 3);
+
     binary_search::Result result = algorithms::execute_binary_search(primes, search);
 
     if (result.found) {
