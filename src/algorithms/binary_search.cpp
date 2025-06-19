@@ -16,7 +16,7 @@ namespace binary_search {
     unsigned int min = 0;
     unsigned int max = int(sorted.size() - 1);
     unsigned int mid = 0;
-    unsigned int rounds = 0;
+    unsigned int rounds = 1;
 
     while (min <= max) {
       mid = int(std::floor((min + max) / 2));
