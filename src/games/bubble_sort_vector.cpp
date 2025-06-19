@@ -7,15 +7,15 @@ namespace bubble_sort_vector {
   void play() {
     std::vector<unsigned int> unsorted = { 78, 25, 9, 15, 99, 2 };
 
-    std::cout << "Vector: ["
+    std::cout << "Vector: "
               << terminal::array_join(unsorted, ", ")
-              << "], before\n";
+              << " -> before\n";
     
     algorithms::execute_bubble_sort(unsorted);
 
-    std::cout << "Vector: ["
+    std::cout << "Vector: "
               << terminal::array_join(unsorted, ", ")
-              << "], after\n";
+              << " -> after\n";
 
     terminal::wait_any_key();
   }

@@ -33,10 +33,12 @@ namespace terminal {
     std::string joined = "";
     typename std::vector<unsigned int>::const_iterator it;
     
-
     for (it = array.begin(); it < (array.end() - 1); it++) {
       joined.append(std::to_string(*it));
-      joined.append(joiner);
+
+      if (it < array.end() - 2) {
+        joined.append(joiner);
+      }
     }
 
     return joined; 
